@@ -61,7 +61,7 @@ public class Programa extends JFrame {
 		JButton btnEnviar = new JButton("Enviar");
 		btnEnviar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(Programa.this, "Demonstração do evento de ação!");
+				JOptionPane.showMessageDialog(Programa.this, "Nome informado: " + txtNome.getText());
 			}
 		});
 		btnEnviar.setBounds(162, 100, 89, 23);
