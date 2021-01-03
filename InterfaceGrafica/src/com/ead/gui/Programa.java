@@ -12,6 +12,10 @@ import javax.swing.JButton;
 import javax.swing.SwingConstants;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Programa extends JFrame {
 
@@ -55,6 +59,11 @@ public class Programa extends JFrame {
 		Painel.add(cmbSexo);
 		
 		JButton btnEnviar = new JButton("Enviar");
+		btnEnviar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(Programa.this, "Demonstração do evento de ação!");
+			}
+		});
 		btnEnviar.setBounds(162, 100, 89, 23);
 		Painel.add(btnEnviar);
 		
