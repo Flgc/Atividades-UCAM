@@ -4,7 +4,7 @@ public class ProcessaContaCorrente implements Runnable {
 
 	ContaCorrente conta = new ContaCorrente();
 
-	private void efetuarOperacao(double valor) {
+	private synchronized  void efetuarOperacao(double valor) {
 		String nome = Thread.currentThread().getName();
 		try {
 			if (conta.VerificaSaldo(valor)) {
