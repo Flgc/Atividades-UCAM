@@ -752,3 +752,9 @@ java.nio.file.InvalidPathException: Illegal char <:> at index 4: .git:
 	at org.eclipse.egit.core.Activator$CheckProjectsToShare.visitConnect(Activator.java:771)
 	at org.eclipse.egit.core.Activator$CheckProjectsToShare.run(Activator.java:720)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.ui 2 0 2021-01-03 18:11:37.289
+!MESSAGE The 'org.eclipse.jdt.ui.JavaAllCompletionProposalComputer' proposal computer from the 'org.eclipse.jdt.ui' plug-in did not complete normally. The extension took too long to return from the 'computeCompletionProposals()' operation.
+
+!ENTRY org.eclipse.jdt.ui 2 0 2021-01-03 18:11:46.785
+!MESSAGE The 'org.eclipse.jdt.ui.JavaAllCompletionProposalComputer' proposal computer from the 'org.eclipse.jdt.ui' plug-in did not complete normally. The extension took too long to return from the 'computeCompletionProposals()' operation.
