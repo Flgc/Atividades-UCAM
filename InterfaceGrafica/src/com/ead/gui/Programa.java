@@ -54,9 +54,12 @@ public class Programa extends JFrame {
 		Painel.add(txtNome);
 		txtNome.setColumns(10);
 		
-		JComboBox cmbSexo = new JComboBox();
+		JComboBox cmbSexo = new JComboBox<String>();
 		cmbSexo.setBounds(108, 56, 275, 22);
 		Painel.add(cmbSexo);
+		cmbSexo.addItem("");
+		cmbSexo.addItem("MASCULINO");
+		cmbSexo.addItem("FEMININO");
 		
 		JButton btnEnviar = new JButton("Enviar");
 		btnEnviar.addActionListener(new ActionListener() {
