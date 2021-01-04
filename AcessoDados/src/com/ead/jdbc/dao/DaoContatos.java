@@ -33,8 +33,8 @@ public class DaoContatos {
 	public void incluir(Contatos contato) throws Exception {
 		try {
 			abrirConexao();
-			stmt = cn.prepareStatement("INSERT INTO CONTATOS (NOME_CONTATO, TELEFONE_CONTATO, "
-					+ "EMAIL_CONTATO, DATA_CADASTRO) VALUES (?,?,?,?)");
+			stmt = cn.prepareStatement("INSERT INTO CONTATOS (NOME, TELEFONE, "
+					+ "EMAIL, DATA) VALUES (?,?,?,?)");
 			stmt.setString(1, contato.getNome());
 			stmt.setString(2, contato.getTelefone());
 			stmt.setString(3, contato.getEmail());
@@ -73,10 +73,10 @@ public class DaoContatos {
 			if (rs.next()) {
 				contato = new Contatos();
 				contato.setId(id);
-				contato.setNome(rs.getString("NOME_CONTATO"));
-				contato.setTelefone(rs.getString("TELEFONE_CONTATO"));
-				contato.setEmail(rs.getString("EMAIL_CONTATO"));
-				contato.setData(rs.getDate("DATA_CADASTRO"));
+				contato.setNome(rs.getString("NOME"));
+				contato.setTelefone(rs.getString("TELEFONE"));
+				contato.setEmail(rs.getString("EMAIL"));
+				contato.setData(rs.getDate("DATA"));
 			}
 		} catch (Exception e){
 			throw e;
@@ -89,8 +89,8 @@ public class DaoContatos {
 	public void alterar(Contatos contato) throws Exception{
 		try {
 			abrirConexao();
-			stmt = cn.prepareStatement("UPDATE CONTATOS SET NOME_CONTATO=?,  TELEFONE_CONTATO=?," +
-															"EMAIL_CONTATO=?,DATA_CADASTRO=? WHERE ID=?");
+			stmt = cn.prepareStatement("UPDATE CONTATOS SET NOME=?,  TELEFONE=?," +
+															"EMAIL=?,DATA=? WHERE ID=?");
 			stmt.setString(1, contato.getNome());
 			stmt.setString(2, contato.getTelefone());
 			stmt.setString(3,contato.getEmail());
@@ -114,10 +114,10 @@ public class DaoContatos {
 			while(rs.next()) {
 				Contatos contato = new Contatos();
 				contato.setId(rs.getInt("ID"));
-				contato.setNome(rs.getString("NOME_CONTATO"));
-				contato.setTelefone(rs.getString("TELEFONE_CONTATO"));
-				contato.setEmail(rs.getString("EMAIL_CONTATO"));
-				contato.setData(rs.getDate("DATA_CADASTRO"));
+				contato.setNome(rs.getString("NOME"));
+				contato.setTelefone(rs.getString("TELEFONE"));
+				contato.setEmail(rs.getString("EMAIL"));
+				contato.setData(rs.getDate("DATA"));
 				
 				contatos.add(contato);
 			}
