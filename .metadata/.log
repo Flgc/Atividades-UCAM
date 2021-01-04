@@ -758,3 +758,20 @@ java.nio.file.InvalidPathException: Illegal char <:> at index 4: .git:
 
 !ENTRY org.eclipse.jdt.ui 2 0 2021-01-03 18:11:46.785
 !MESSAGE The 'org.eclipse.jdt.ui.JavaAllCompletionProposalComputer' proposal computer from the 'org.eclipse.jdt.ui' plug-in did not complete normally. The extension took too long to return from the 'computeCompletionProposals()' operation.
+
+!ENTRY org.eclipse.core.jobs 4 2 2021-01-03 21:50:06.911
+!MESSAGE An internal error occurred during: "Auto share git projects".
+!STACK 0
+java.nio.file.InvalidPathException: Illegal char <:> at index 4: .git:
+	at java.base/sun.nio.fs.WindowsPathParser.normalize(WindowsPathParser.java:182)
+	at java.base/sun.nio.fs.WindowsPathParser.parse(WindowsPathParser.java:153)
+	at java.base/sun.nio.fs.WindowsPathParser.parse(WindowsPathParser.java:77)
+	at java.base/sun.nio.fs.WindowsPath.parse(WindowsPath.java:92)
+	at java.base/sun.nio.fs.WindowsFileSystem.getPath(WindowsFileSystem.java:229)
+	at java.base/java.nio.file.Path.resolve(Path.java:515)
+	at org.eclipse.egit.core.RepositoryUtil.getAbsoluteRepositoryPath(RepositoryUtil.java:666)
+	at org.eclipse.egit.core.RepositoryUtil.toDirSet(RepositoryUtil.java:511)
+	at org.eclipse.egit.core.RepositoryUtil.getRepositories(RepositoryUtil.java:475)
+	at org.eclipse.egit.core.Activator$CheckProjectsToShare.visitConnect(Activator.java:771)
+	at org.eclipse.egit.core.Activator$CheckProjectsToShare.run(Activator.java:720)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
