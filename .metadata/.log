@@ -2584,3 +2584,20 @@ java.net.UnknownHostException: jope.ow2.org
 
 !ENTRY org.eclipse.jst.server.tomcat.core 4 0 2021-02-08 22:54:00.199
 !MESSAGE Several ports (8005, 8080) required by Tomcat v7.0 Server at localhost (3) are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.core.jobs 4 2 2021-02-08 23:02:28.652
+!MESSAGE An internal error occurred during: "Auto share git projects".
+!STACK 0
+java.nio.file.InvalidPathException: Illegal char <:> at index 4: .git:
+	at java.base/sun.nio.fs.WindowsPathParser.normalize(WindowsPathParser.java:182)
+	at java.base/sun.nio.fs.WindowsPathParser.parse(WindowsPathParser.java:153)
+	at java.base/sun.nio.fs.WindowsPathParser.parse(WindowsPathParser.java:77)
+	at java.base/sun.nio.fs.WindowsPath.parse(WindowsPath.java:92)
+	at java.base/sun.nio.fs.WindowsFileSystem.getPath(WindowsFileSystem.java:229)
+	at java.base/java.nio.file.Path.resolve(Path.java:515)
+	at org.eclipse.egit.core.RepositoryUtil.getAbsoluteRepositoryPath(RepositoryUtil.java:666)
+	at org.eclipse.egit.core.RepositoryUtil.toDirSet(RepositoryUtil.java:511)
+	at org.eclipse.egit.core.RepositoryUtil.getRepositories(RepositoryUtil.java:475)
+	at org.eclipse.egit.core.Activator$CheckProjectsToShare.visitConnect(Activator.java:771)
+	at org.eclipse.egit.core.Activator$CheckProjectsToShare.run(Activator.java:720)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
