@@ -1,15 +1,4 @@
 INDEX VERSION 1.131+D:\WS-JAVA\Atividades-UCAM\.metadata\.plugins\org.eclipse.jdt.core
-2940608268.index
-4043075391.index
-1472284144.index
-551088099.index
-3939175826.index
-2376322400.index
-2172014700.index
-1978240455.index
-3444969395.index
-3773147059.index
-874956868.index
-1465721406.index
-612824834.index
-904255458.index
+468988639.index
+107573622.index
+279464321.index
