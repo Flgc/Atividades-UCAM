@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="validacao" method="post">
+	<form action="<%= response.encodeURL("validacao") %>"  method="post">
 		Usuário: <input type="text" name="nome" size="10"><br />
 		Senha: <input type="password" name="senha" size="10"><br />
 		<input type="submit" value="Enviar">
