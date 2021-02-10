@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,10 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-//Parou no video (2 servlet -> 2-servelets 5:27) gerenciamento de sessao
-<form action="validacao"  method="post">
-Usuário: <imput type="text" name="nome" size="10"><br/>
+	<form action="validacao" method="post">
+		Usuário: <input type="text" name="nome" size="10"><br />
+		Senha: <input type="password" name="senha" size="10"><br />
+		<input type="submit" value="Enviar">
+	</form>
 </body>
-</form>
-	
 </html>
