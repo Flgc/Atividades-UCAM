@@ -1,6 +1,7 @@
 package com.ead.Filter;
 
 import java.io.IOException;
+
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
@@ -8,6 +9,8 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * Servlet Filter implementation class FilterLogin
@@ -15,12 +18,12 @@ import javax.servlet.annotation.WebFilter;
 @WebFilter("/validacao")
 public class FilterLogin implements Filter {
 
-    /**
-     * Default constructor. 
-     */
-    public FilterLogin() {
-        // TODO Auto-generated constructor stub
-    }
+	/**
+	 * Default constructor.
+	 */
+	public FilterLogin() {
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
 	 * @see Filter#destroy()
@@ -32,12 +35,20 @@ public class FilterLogin implements Filter {
 	/**
 	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
 	 */
-	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-		// TODO Auto-generated method stub
-		// place your code here
+	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+			throws IOException, ServletException {
 
-		// pass the request along the filter chain
-		chain.doFilter(request, response);
+		HttpServletRequest req = (HttpServletRequest) request;
+		HttpServletResponse resp = (HttpServletResponse) response;
+
+		String filtnome = req.getParameter("nome");
+		String filtsenha = req.getParameter("senha");
+
+		if (filtnome.equals("") || filtsenha.equals("")) {
+			resp.sendRedirect("login.jsp");
+		} else {
+			chain.doFilter(request, response);
+		}
 	}
 
 	/**
