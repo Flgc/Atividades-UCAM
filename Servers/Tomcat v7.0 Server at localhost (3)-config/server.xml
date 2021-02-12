@@ -130,7 +130,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log." suffix=".txt"/>
 
-      <Context docBase="Servlets25" path="/Servlets25" reloadable="true" source="org.eclipse.jst.jee.server:Servlets25"/><Context docBase="Servlets30" path="/Servlets30" reloadable="true" source="org.eclipse.jst.jee.server:Servlets30"/><Context docBase="ExemploSessao" path="/ExemploSessao" reloadable="true" source="org.eclipse.jst.jee.server:ExemploSessao"/><Context docBase="ExemploScriptlet" path="/ExemploScriptlet" reloadable="true" source="org.eclipse.jst.jee.server:ExemploScriptlet"/></Host>
+      <Context docBase="Servlets25" path="/Servlets25" reloadable="true" source="org.eclipse.jst.jee.server:Servlets25"/><Context docBase="Servlets30" path="/Servlets30" reloadable="true" source="org.eclipse.jst.jee.server:Servlets30"/><Context docBase="ExemploSessao" path="/ExemploSessao" reloadable="true" source="org.eclipse.jst.jee.server:ExemploSessao"/><Context docBase="ExemploScriptlet" path="/ExemploScriptlet" reloadable="true" source="org.eclipse.jst.jee.server:ExemploScriptlet"/><Context docBase="ExemploJavaBeans" path="/ExemploJavaBeans" reloadable="true" source="org.eclipse.jst.jee.server:ExemploJavaBeans"/></Host>
     </Engine>
   </Service>
 </Server>
