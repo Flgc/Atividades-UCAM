@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns=”http://www.w3.org/1999/xhtml”
+	xmlns:h=”http://java.sun.com/jsf/html”
+	xmlns:f=”http://java.sun.com/jsf/core”>
+<h:head>
+	<title>Login</title>
+</h:head>
+<h:body>
+	<f:view>
+		<h:form>
+			<h3>Por favor, informar seu usuário e sua senha.</h3>
+			<table>
+				<tr>
+					<td>Nome:</td>
+					<td><h:inputText value=”#{usuarios.nome}” /></td>
+				</tr>
+				<tr>
+					<td>Senha:</td>
+					<td><h:inputSecret value=”#{usuarios.senha}” /></td>
+				</tr>
+			</table>
+			<p>
+				<h:commandButton value=”Login” action=”#{usuarios.validarUsuario}” />
+			</p>
+		</h:form>
+	</f:view>
+</h:body>
+</html>
