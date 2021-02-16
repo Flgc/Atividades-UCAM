@@ -1,26 +1,27 @@
 <!DOCTYPE html>
-<html xmlns=”http://www.w3.org/1999/xhtml”
-	xmlns:h=”http://java.sun.com/jsf/html”
-	xmlns:f=”http://java.sun.com/jsf/core”>
+<html xmlns=â€http://www.w3.org/1999/xhtmlâ€
+	xmlns:h=â€http://java.sun.com/jsf/htmlâ€
+	xmlns:f=â€http://java.sun.com/jsf/coreâ€>
 <h:head>
+<meta charset="ISO-8859-1">
 	<title>Login</title>
 </h:head>
 <h:body>
 	<f:view>
 		<h:form>
-			<h3>Por favor, informar seu usuário e sua senha.</h3>
+			<h3>Por favor, informar seu usuÃ¡rio e sua senha.</h3>
 			<table>
 				<tr>
 					<td>Nome:</td>
-					<td><h:inputText value=”#{usuarios.nome}” /></td>
+					<td><h:inputText value=â€#{usuarios.nome}â€ /></td>
 				</tr>
 				<tr>
 					<td>Senha:</td>
-					<td><h:inputSecret value=”#{usuarios.senha}” /></td>
+					<td><h:inputSecret value=â€#{usuarios.senha}â€ /></td>
 				</tr>
 			</table>
 			<p>
-				<h:commandButton value=”Login” action=”#{usuarios.validarUsuario}” />
+				<h:commandButton value=â€Loginâ€ action=â€#{usuarios.validarUsuario}â€ />
 			</p>
 		</h:form>
 	</f:view>
