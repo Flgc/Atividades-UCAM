@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://ws.ead.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://ws.ead.com" xmlns:intf="http://ws.ead.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://ws.ead.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="validarCartao">
+    <complexType>
+     <sequence>
+      <element name="numero" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="validarCartaoResponse">
+    <complexType>
+     <sequence>
+      <element name="validarCartaoReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="validarCartaoResponse">
+
+      <wsdl:part element="impl:validarCartaoResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="validarCartaoRequest">
+
+      <wsdl:part element="impl:validarCartao" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="Cartao">
+
+      <wsdl:operation name="validarCartao">
+
+         <wsdl:input message="impl:validarCartaoRequest" name="validarCartaoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:validarCartaoResponse" name="validarCartaoResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="CartaoSoapBinding" type="impl:Cartao">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="validarCartao">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="validarCartaoRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="validarCartaoResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="CartaoService">
+
+      <wsdl:port binding="impl:CartaoSoapBinding" name="Cartao">
+
+         <wsdlsoap:address location="http://localhost:8080/CartaoWebService/services/Cartao"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
