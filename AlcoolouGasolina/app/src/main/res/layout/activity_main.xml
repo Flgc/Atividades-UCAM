@@ -71,25 +71,27 @@
         android:layout_width="360dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
+        android:onClick="calcularPreco"
         android:text="CALCULAR"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
-        android:gravity="center_horizontal" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 
     <TextView
         android:id="@+id/textResultado"
         android:layout_width="360dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
+        android:gravity="center_horizontal"
         android:text="RESULTADO"
         android:textAlignment="center"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button"
-        tools:text="RESULTADO"
-        android:gravity="center_horizontal" />
+        tools:text="RESULTADO" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
