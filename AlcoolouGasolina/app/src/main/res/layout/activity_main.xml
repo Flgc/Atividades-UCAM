@@ -14,14 +14,15 @@
         app:layout_constraintHorizontal_bias="0.554"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/logo"
+        android:contentDescription="@string/todo" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="Saiba a melhor opção para o abastecimento do seu carro"
+        android:text="@string/saiba_a_melhor_op_o_para_o_abastecimento_do_seu_carro"
         android:textSize="24sp"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,8 +44,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="Preço Alcool. Ex: R$ 1,90"
-            android:inputType="numberDecimal" />
+            android:hint="@string/pre_o_alcool_ex_r_1_90"
+            android:inputType="numberDecimal"
+            android:autofillHints="" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -62,8 +64,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="Preço Gasolina. Ex: R$ 2,90"
-            android:inputType="numberDecimal" />
+            android:hint="@string/pre_o_gasolina_ex_r_2_90"
+            android:inputType="numberDecimal"
+            android:autofillHints="" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -73,7 +76,7 @@
         android:layout_marginTop="40dp"
         android:gravity="center_horizontal"
         android:onClick="calcularPreco"
-        android:text="CALCULAR"
+        android:text="@string/calcular"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,7 +88,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:gravity="center_horizontal"
-        android:text="RESULTADO"
+        android:text="@string/resultado"
         android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="bold"
